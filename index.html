@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+  <style>
+    body,
+    html {
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    .start {
+      background-image: url('data:image/png;base64,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');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+    }
+
+    .r {
+      background-image: url('https://images.vexels.com/media/users/3/145830/isolated/preview/e529a985fbd2671b43973dc509d21c93-rubble-rock-by-vexels.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .p {
+      background-image: url('http://prideacademy317.com/wp-content/uploads/2015/11/sign-icon-paper-law-cartoon-free-documents.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .s {
+      background-image: url('data:image/png;base64,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');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .player {
+      width: 100%;
+      height: 45vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    #outcome {
+      height: 10vh;
+      background-color: rgb(182, 182, 182);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    #player-choice,
+    #computer-choice {
+      width: 33%;
+      height: 100%;
+      padding: 1em;
+    }
+
+    #ins{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      border: 1px solid rgb(202, 202, 202);
+      border-radius: 5px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      padding: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="game">
+    <div id="computer" class="player">
+      <div id="computer-choice" class="start">
+        
+      </div>
+    </div>
+    <div id="outcome">
+    </div>
+    <div id="player" class="player">
+      <div id="ins">
+          <h3>Press:</h3>
+          <p>P - Paper</p>
+          <p>R- Rock</p>
+          <p>S - Scissors</p>
+      </div>
+      <div id="player-choice" class="start">
+          
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function (event) {
+      if (event.key === 'p' || event.key === 'r' || event.key === 's') {
+        // Determines which key was pressed.
+        var userGuess = event.key;
+        document.getElementById('player-choice').className = userGuess;
+        // Randomly chooses a choice from the options array. This is the Computer's guess.
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        document.getElementById('computer-choice').className = computerGuess;
+        // Alerts the key the user pressed (userGuess).
+        var isWinning = 'Winnner';
+        if ((userGuess === computerGuess)) {
+          isWinning = 'Tie!'
+        } else if ((userGuess === 'p' && computerGuess === 's') || (userGuess === 'r' && computerGuess === 'p') || (userGuess === 's' && computerGuess === 'r')) {
+          isWinning = 'Lose!'
+        } else {
+          isWinning = 'Win!'
+        }
+        document.querySelector('#outcome').innerHTML = `<h1>Outcome is: ${isWinning}</h1>`;
+      }
+    };
+  </script>
+
+</body>
+
+</html>
